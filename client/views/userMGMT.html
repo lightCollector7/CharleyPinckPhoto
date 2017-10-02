@@ -1,0 +1,56 @@
+
+<div id="blogBackground">
+    <div class="container blogSubNavBar" id="top-container">
+         <p class="navbar-text navbar-right"> <a href="/gallery" class="navbar-link">Galleries</a></p>
+        <p class="navbar-text navbar-right"> <a href="/adminOnly" class="navbar-link" ng-hide="ifAdmin">User Management Page (admin only)</a></p>
+        <p class="navbar-text navbar-right"> <a href="/posts" class="navbar-link" >Blog</a></p>
+        <p class="navbar-text navbar-right" ng-show="loggedIn"><a class="navbar-link" ng-click="logout()">logout</a></p>
+        <p id="signedInAs" class="navbar-text navbar-right" ng-show="loggedIn">Signed in as <a class="navbar-link"></a>{{ ME.firstname }} {{ ME.lastname }}</p>  
+    </div>
+
+
+    <div class="page-header">
+            <h1 id="titleHeader1">Photo || Code  </h1>
+            <h3 class="pageSubtitle"> User Management </h3>
+    </div>
+
+
+
+    <div id="bodyContainer" class = "container">
+        <div id="UsersContainer" class = "container">
+            <div>  
+                <h1 class="pageSubtitle2"> Current Photo || Code  Contributers</h1>
+                <p class ="underline">____________________________________________________________________________</p>
+            
+                <div class="list-group" id="list-content" ng-repeat="user in users"> 
+                    <span>
+                    <div>
+                    <p class="currentUsers"> {{user.firstname}} {{user.lastname}}
+                    <button id="updateRedirect" class="btn btn-default btn-xs" type= "button" ng-click="updateRedirect(user)">Update</button>
+                    <button id="userDeleteBtn" class="btn btn-default btn-xs" type= "button" ng-click="promptDeleteUser(user)">Delete</button>
+                    </span>
+                    </p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        
+    <div class="container" id="post-container">
+            <div class="list-group" id="list-content" >
+                <h1 class="pageSubtitle3"> new user:</h1>
+                <div class="form-group">
+                <form name="newUserForm"> 
+                    <input type="text" id = 'titleBox' class="form-control" ng-model="user.firstname" placeholder="First name goes here..." required>
+                    <input type="text" id = 'titleBox' class="form-control" ng-model="user.lastname" placeholder="Last name goes here..." required>
+                    <input type="text" id = 'titleBox' class="form-control" ng-model="user.email" placeholder="email goes here..." required>
+                    <input type="text" id = 'titleBox' class="form-control" ng-model="user.password" placeholder="password goes here..." required>
+                    <input type="text" id = 'titleBox' class="form-control" ng-model="user.role" placeholder="role goes here..." required>
+                    <button id = 'postButton' class="btn btn-default" type="button" ng-disabled="newUserForm.$invalid" ng-click="submitNewUser()">Submit New User</button>
+                </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

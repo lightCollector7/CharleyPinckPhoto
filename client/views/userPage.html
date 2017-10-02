@@ -1,0 +1,44 @@
+<div id="blogBackground">
+    <div class="container" id="top-container">
+            <p class="navbar-text navbar-right"> <a href="/gallery" class="navbar-link">Galleries</a></p>
+            <!--<p class="navbar-text navbar-right"> <a href="/donate" class="navbar-link">Donate</a></p>-->
+            <p class="navbar-text navbar-right"> <a href="/adminOnly" class="navbar-link" ng-hide="ifAdmin">User Management Page (admin only)</a></p>
+            <p class="navbar-text navbar-right"> <a href="/posts" class="navbar-link" >Blog</a></p>
+            <p class="navbar-text navbar-right" ng-show="loggedIn"><a class="navbar-link" ng-click="logout()">logout</a></p>
+            <p id="signedInAs" class="navbar-text navbar-right" ng-show="loggedIn">Signed in as <a class="navbar-link"></a>{{ ME.firstname }} {{ ME.lastname }}</p>  
+    </div>
+        
+    <div class="page-header">
+            <h1 id="titleHeader1">Photo || Code </h1>
+            <h3 class="pageSubtitle"> User Page: {{ME.firstname}} {{ME.lastname}} </h3>
+    </div>
+
+    <div id="bodyContainer" class="container">
+        <div>  <a href="/compose"><button type="button" class="btn btn-primary btn-xs">COMPOSE</button></a></div>
+    
+        
+        <div id="UsersContainer" class = "container">
+            <div>  
+                <h3 class="pageSubtitle"> Photo || Code Contributers</h3>
+                <p class ="underline">____________________________________________________________________________</p>
+                <div class="list-group" id="list-content" ng-repeat="user in users">
+                <p class="currentUsers">{{user.firstname}} {{user.lastname}}</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div id=userPosts" class="container">
+                <h3 class="pageSubtitle"> Your Posts</h3>
+                <p class ="underline">____________________________________________________________________________</p>
+                <div class="container" id="post-container">
+                    <div class="list-group" id="list-content" ng-repeat="post in myPosts">
+                        <div class="list-group-item">
+                            <p class="titlebyline"><a class='link' ng-href="/{{ post.id }}" >{{ post.title }} </a><br>by {{ post.firstname }} {{ post.lastname }}</p> 
+                            <p class="cattime"> Category || {{ post.categoryname }} <br>{{ post.createdAt | date: 'short' }}</p>  
+                        </div> 
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

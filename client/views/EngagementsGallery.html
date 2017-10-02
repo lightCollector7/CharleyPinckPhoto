@@ -1,0 +1,19 @@
+
+<div ng-include="'./views/constantViews/NavBarView.html'"></div>
+
+<div ng-include="'./views/constantViews/sideMenuView.html'"></div>
+
+
+<div id="galleryBackground">
+    <div id="carouselContainer">
+       <carousel id="engagementsCarousel" interval="" class="galleryCarousel">
+            <slide class="" ng-repeat="photoSlide in engagementPhotoSlides" active="photoSlide.active">
+                <div class="engagementPhotoBackground" ng-style="{ 'background-image': 'url(' + photoSlide.image + ')' }">
+                    <div class="carousel-caption"></div>
+                </div>
+            </slide>
+        </carousel>
+    </div>
+</div>
+
+<!--<div id="bottomSprockets"></div>-->

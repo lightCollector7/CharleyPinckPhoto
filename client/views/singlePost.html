@@ -1,0 +1,31 @@
+<div id="blogBackground">
+
+ 
+ <div class="container blogSubNavBar" id="top-container">
+      <p class="navbar-text navbar-right"> <a href="/gallery" class="navbar-link">Galleries</a></p>
+      
+      <p class="navbar-text navbar-right"> <a href="/users" class="navbar-link">admin</a></p>
+      <p class="navbar-text navbar-right"> <a href="/posts" class="navbar-link" >Blog</a></p>
+      <p class="navbar-text navbar-right" ng-show="loggedIn"><a class="navbar-link" ng-click="logout()">logout</a></p>
+      <p id="signedInAs" class="navbar-text navbar-right" ng-show="loggedIn">Signed in as <a class="navbar-link"></a>{{ ME.firstname }} {{ ME.lastname }}</p>
+ </div>
+    
+<div class="page-header">
+    <h1 id="titleHeader1">Photo || Code  </h1>
+</div>
+
+<div class="container" id="post-container">  
+    <div class="list-group" id="list-content">
+            <div id="articleTitleBox" class="list-group-item">
+                <h1 id="titleline">  {{ post.title }} </h1>
+                <h5 id="byline"> by {{ post.firstname }} {{ post.lastname }} </h5>
+                <h6 id="catDateLine">{{ post.categoryname }} {{ post.createdAt | date: 'short' }}</h6>
+            </div>
+            <markdown-renderer text="post.content" id="postDiv" class="list-group-item"></markdown-renderer>
+            <!--<div id="postDiv" class="list-group-item">
+                {{ post.content }}
+            </div>-->
+            <button id = 'editButton' class="btn btn-default" type="button" ng-show="loggedIn" ng-click="goToUpdate()">Edit/Update</button>  
+    </div>
+</div>
+</div>

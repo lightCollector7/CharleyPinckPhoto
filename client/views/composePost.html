@@ -1,0 +1,48 @@
+  <div id="blogBackground">
+    <div class="container" id="top-container">
+        <p class="navbar-text navbar-right"> <a href="/users" class="navbar-link">admin</a></p>
+        <p class="navbar-text navbar-right" ng-show="isLoggedIn()"> <a class="navbar-link" ng-show="isloggedIn()" ng-click="logout()">logout</a></p>
+        <p id="signedInAs" class="navbar-text navbar-right" ng-show="isLoggedIn()">Signed in as <a class="navbar-link"></a>{{ ME.firstname }} {{ ME.lastname }}</p>
+    </div>
+        
+        <div class="page-header">
+            <h1 id="titleHeader1">Photo || Code  </h1>
+            <h4 id ="titleHeader1"> author: {{ ME.firstname }} {{ ME.lastname }}</h4>
+        </div>
+    
+
+    <div class="container" id="top-container">
+        <form name="blogForm"> 
+        <span>
+        <!-- <select id="user-selector" ng-model= "post.userid" required>
+                        <option value="">Select User</option>
+                        <option value="{{ user.id }}" ng-repeat="user in users">{{ user.firstname }}{{user.lastname}}</option>
+            </select> -->
+            <select id="category-selector" ng-model= "post.categoryid" required>
+                        <option value="">Select Category</option>
+                        <option value="{{ category.id }}" ng-repeat="category in categories">{{ category.name }}</option>
+            </select>
+        </span>
+    
+        <input type="text" id = 'titleBox' class="form-control" ng-model="post.title" placeholder="Title goes here..." required>
+    </div>
+
+    <div class="container" id="bottom-container">
+    
+        <div class="form-group">
+        <textarea class="form-control" rows="45" id="blogPostBox" ng-model="post.content" placeholder="Compose blog post here..." required></textarea>
+        </div>
+            <span class="input-group-btn">
+            <button id = 'postButton' class="btn btn-default" type="button" ng-disabled="blogForm.$invalid" ng-click="submitBlogPost()">Submit Blog Post</button>
+            <a href="/posts"><button class="btn btn-default" type="button" >Cancel</button></a>
+            </span>
+        </form>
+    </div>
+    <div>
+        <br><br><br><br><br><br><br>
+    </div>
+  </div>
+
+
+
+  

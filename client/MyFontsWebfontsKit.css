@@ -1,0 +1,40 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3305558, 2016-11-07T20:17:45-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: LuloCleanOutline-Bold by Yellow Design Studio
+ * URL: http://www.myfonts.com/fonts/yellow-design/lulo-clean/outline-bold/
+ * Copyright: Copyright (c) 2014 by Yellow Design Studio. All rights reserved.
+ * Licensed pageviews: Unlimited
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3305558
+ * 
+ * © 2016 MyFonts Inc
+*/
+
+
+
+
+  
+@font-face {
+    font-family: 'LuloCleanOutline-Bold';
+    src: url('webfonts/LuloCleanOutlineBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'LuloCleanOne';
+    src: url('webfonts/LuloCleanOne.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'LuloCleanOneBold';
+    src: url('webfonts/LuloCleanOneBold.otf') format('opentype');
+}
+ 

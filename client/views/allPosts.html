@@ -1,0 +1,31 @@
+
+<div id="blogBackground">
+   
+
+    <div class="container blogSubNavBar" id="top-container">
+        <p class="navbar-text navbar-right"> <a href="/gallery" class="navbar-link">Galleries</a></p>
+        <!--<p class="navbar-text navbar-right"> <a href="/donate" class="navbar-link">Donate</a></p>-->
+        <p class="navbar-text navbar-right"> <a href="/users" class="navbar-link">admin</a></p>
+        <p class="navbar-text navbar-right" ng-show="loggedIn"><a class="navbar-link" ng-click="logout()">logout</a></p>
+        <p id="signedInAs" class="navbar-text navbar-right" ng-show="loggedIn">Signed in as <a class="navbar-link"></a>{{ ME.firstname }} {{ ME.lastname }}</p>
+        
+    </div>
+        
+        
+        <div class="page-header">
+            <h1 id="titleHeader1">Photo || Code </h1>
+            
+        </div>
+        
+    <div class="container" id="post-container">
+        <div class="list-group" id="list-content" ng-repeat="post in posts">
+            <div class="list-group-item">
+                <p class="titlebyline"><a class='link' ng-href="/{{ post.id }}" >{{ post.title }} </a><br>by {{ post.authorfirstname }} {{ post.authorlastname }}</p> 
+                <p class="cattime"> Category || {{ post.categoryname }} <br>{{ post.createdAt | date: 'short' }}</p>  
+            </div> 
+        </div>
+    </div>
+ </div>
+
+
+

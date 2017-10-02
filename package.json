@@ -1,0 +1,36 @@
+{
+  "name": "CharleyPinckPhoto",
+  "version": "1.0.0",
+  "description": "angular blog project",
+  "main": "server/serverIndex.js",
+  "scripts": {
+    "test": "source .variables && nodemon",
+    "start": "node server/serverIndex.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lightCollector7/CharleyPinckPhoto.git"
+  },
+  "author": "CharleyPinckney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lightCollector7/CharleyPinckPhoto/issues"
+  },
+  "homepage": "https://github.com/lightCollector7/CharleyPinckPhoto#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.1",
+    "body-parser": "^1.15.2",
+    "bower": "^1.8.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "express-mysql-session": "^1.2.0",
+    "express-session": "^1.14.1",
+    "marked": "^0.3.6",
+    "mysql": "^2.11.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "prerender-node": "^2.5.0",
+    "sendgrid": "^4.7.1",
+    "stripe": "^4.12.0"
+  }
+}

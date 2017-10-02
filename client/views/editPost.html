@@ -1,0 +1,29 @@
+<div id="blogBackground">
+    <div id="editPostContainer">
+        <div class="container" id="top-container">
+            <span>
+                
+                <select id="category-selector" ng-model= "post.categoryid">
+                            <option value="">Select Category</option>
+                            <option value="{{ category.id }}" ng-repeat="category in categories" ng-model="post.categoryid">{{ category.name }}</option>
+                </select>
+            </span>
+        
+            <input type="text" id = 'titleBox' class="form-control" ng-model="post.title">
+        </div>
+
+        <div class="container" id="bottom-container">
+        
+            <div class="form-group">
+            <textarea class="form-control" rows="15" id="blogPostBox" ng-model="post.content"></textarea>
+            </div>
+            <div>
+                <button id = 'updateButton' class="btn btn-default" type="button" ng-click="update()">Update!</button>
+                <button id = 'deleteButton' class="btn btn-default" type="button" ng-show="ifAdmin" ng-click="promptDelete()">Delete</button>   <!--hide this when not admin -->
+                <button id = 'cancelUpdateButton' class="btn btn-default" type="button" ng-click="cancelupdate()">Go Back</button>    
+            </div>
+        </div>
+    </div>
+</div>
+
+
