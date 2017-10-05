@@ -1,7 +1,7 @@
 {
   "name": "CharleyPinckPhoto",
   "version": "1.0.0",
-  "description": "angular blog project",
+  "description": "personal photography website",
   "main": "server/serverIndex.js",
   "scripts": {
     "test": "source .variables && nodemon",

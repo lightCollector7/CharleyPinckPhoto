@@ -4,10 +4,10 @@ var mysql = require('mysql');
 
 var pool = mysql.createPool({
     connectionLimit:10,
-    host: process.env.RDS_HOSTNAME,
-    user: process.env.RDS_USERNAME,
-    password: process.env.RDS_PASSWORD,
-    database: process.env.RDS_DATABASE
+    host: process.env.JAWSDB_HOSTNAME,
+    user: process.env.JAWSDB_USERNAME,
+    password: process.env.JAWSDB_PASSWORD,
+    database: process.env.JAWSDB_DATABASE
 });
 
 //----------------------------------------------//
