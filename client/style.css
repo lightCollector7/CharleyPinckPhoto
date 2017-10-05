@@ -15,7 +15,7 @@ body{
 }
 #NavBar{
     /*background: url("https://drive.google.com/open?id=0B0dSZUQdg0czdmNadzVJQUR6dlE");*/
-    background: "./assets/navBarSprockets.PNG";
+    background: url("./assets/navBarSprockets.PNG");
 
     background-color: black;
     background-size: cover;
