@@ -35,7 +35,7 @@ body{
 }
 
 #blogBackground {
-  background: url("https://s3-us-west-2.amazonaws.com/charleypinckphoto/Assets/blogBackground.png") no-repeat 50% 50% fixed; 
+  /*background: url("https://s3-us-west-2.amazonaws.com/charleypinckphoto/Assets/blogBackground.png") no-repeat 50% 50% fixed; */
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -61,7 +61,7 @@ body{
 
 }
 #bottomSprockets{
-    background: url("https://s3-us-west-2.amazonaws.com/charleypinckphoto/Assets/bottomSprockets.png");
+    /*background: url("https://s3-us-west-2.amazonaws.com/charleypinckphoto/Assets/bottomSprockets.png");*/
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
